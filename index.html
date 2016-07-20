@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Boify</title>
+  <meta name="description" content="Boify">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="node_modules/dropzone/dist/min/dropzone.min.css"/>
+    <link rel="stylesheet" href="node_modules/dropzone/dist/min/basic.min.css"/>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Name your sexy image:</h4>
+      </div>
+      <div class="modal-body">
+           <input class="form-control" type="text" id="filename" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="save" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+          <h1 id="title">Boify</h1>
+      </div>
+      <div class="col-xs-12 col-md-4">
+          <button type="button" class="btn btn-large btn-info" data-toggle="modal" data-target=".bs-example-modal-sm">Download</button>
+          <button type="button" class="btn btn-small btn-danger" onclick="window.location.reload()">Reset</button>
+          <button type="button" id="removeObj" class="btn btn-small btn-warning" >Remove sticker</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+            <form class="dropzone" id="dropzone" action="a.php"></form>
+        </main>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <canvas id="canvas">
+
+        </canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12 imagepicker">
+        <ul>
+          <li data-id="1" class="doge"><img src="assets/1.png"/></li>
+          <li data-id="2" class="doge"><img src="assets/2.png"/></li>
+          <li data-id="3" class="doge"><img src="assets/3.png"/></li>
+          <li data-id="4" class="doge"><img src="assets/4.png"/></li>
+          <li data-id="5" class="doge"><img src="assets/5.png"/></li>
+          <li data-id="6" class="doge"><img src="assets/6.png"/></li>
+          <li data-id="7" class="doge"><img src="assets/7.png"/></li>
+          <li data-id="8" class="doge"><img src="assets/8.png"/></li>
+          <li data-id="9" class="doge"><img src="assets/9.png"/></li>
+          <span class="glyphicon glyphicon-chevron-right" id="right" aria-hidden="true"></span>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12 stickers">
+        <ul>
+          <span class="glyphicon glyphicon-chevron-left" id="left" aria-hidden="true"></span>
+          <li data-id="1" class="stick"><img src="assets/stickers/1.png"/></li>
+          <li data-id="2" class="stick"><img src="assets/stickers/2.png"/></li>
+          <li data-id="3" class="stick"><img src="assets/stickers/3.png"/></li>
+          <li data-id="4" class="stick"><img src="assets/stickers/4.png"/></li>
+          <li data-id="5" class="stick"><img src="assets/stickers/5.png"/></li>
+          <li data-id="6" class="stick"><img src="assets/stickers/6.png"/></li>
+          <li data-id="7" class="stick"><img src="assets/stickers/7.png"/></li>
+          <li data-id="8" class="stick"><img src="assets/stickers/8.png"/></li>
+          <li data-id="9" class="stick"><img src="assets/stickers/9.png"/></li>
+          <li data-id="10" class="stick"><img src="assets/stickers/10.png"/></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/fabric/dist/fabric.js"></script>
+  <script src="index.js"></script>
+  <div id="impressum">made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by Pepti & Norpi </div>
+</body>
+</html>

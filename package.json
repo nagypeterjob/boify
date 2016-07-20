@@ -1,0 +1,31 @@
+{
+  "name": "boify",
+  "version": "1.0.0",
+  "description": "Boify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "2.2.4",
+    "dropzone":"*",
+    "fabric":"1.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10",
+    "typings":"^1.0.4"
+  },
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "author": "Nagy Péter",
+  "license": "MIT"
+}
